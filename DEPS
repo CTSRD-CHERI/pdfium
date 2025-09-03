@@ -43,11 +43,11 @@ vars = {
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling build
   # and whatever else without interference from each other.
-  'build_revision': '3c905595655049cd3c7001e18ee07d860452f206',
+  'build_revision': '488dc76b73b8f3c1f0a6a3c780d60494ca5fda06',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling buildtools
   # and whatever else without interference from each other.
-  'buildtools_revision': 'cb7297fa0dbd64da8d2e45849bced29cf4e4f757',
+  'buildtools_revision': '8b16338d17cd71b04a6ba28da7322ab6739892c2',
   # Three lines of non-changing comments so that
   # the commit queue can handle CLs rolling catapult
   # and whatever else without interference from each other.
@@ -193,10 +193,10 @@ deps = {
         Var('trace_event_revision'),
 
   'build':
-    Var('chromium_git') + '/chromium/src/build.git@' + Var('build_revision'),
+    Var('chromium_cheri_git') + '/chromium-cheri/build.git@' + Var('build_revision'),
 
   'buildtools':
-    Var('chromium_git') + '/chromium/src/buildtools.git@' +
+    Var('chromium_cheri_git') + '/chromium-cheri/buildtools.git@' +
         Var('buildtools_revision'),
 
   'buildtools/clang_format/script':
@@ -350,7 +350,7 @@ deps = {
         Var('test_fonts_revision'),
 
   'third_party/zlib':
-    Var('chromium_cheri_git') + '/zlib.git@' +
+    Var('chromium_cheri_git') + '/chromium-cheri/zlib.git@' +
         Var('zlib_revision'),
 
   'tools/clang':
