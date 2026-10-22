@@ -102,9 +102,9 @@ std::string PathService::GetExecutableDir() {
   size_t count = sizeof(buf);
   int ret = sysctl(mib, 4, buf, &count, NULL, 0);
   if (ret < 0)
-    return false;
+    return std::string();
 
-  *path = std::string(buf, count);
+  path = std::string(buf, count);
 #else   // Linux
   static const char kProcSelfExe[] = "/proc/self/exe";
   char buf[PATH_MAX];
